@@ -1,0 +1,203 @@
+$x-small  = 320px;
+$small    = 576px;
+$medium   = 769px;
+$large    = 992px;
+$x-large  = 1200px;
+$xx-large = 1400px;
+
+body
+  background-color #FFF
+  margin 50px 0
+
+h1, h2, ul
+  font-family monospace
+  font-size 14px
+  font-weight normal
+  text-transform uppercase
+  letter-spacing 2px
+  line-height 60px
+  color #FFF
+
+h2
+  text-transform none
+
+main
+  position relative
+  width 95%
+  margin 0 auto
+
+  +above($large)
+    top 100px
+    width 960px
+
+  +above($xx-large)
+    width 1280px
+
+header, h1
+  background-color #565656
+  margin 0
+  border 2px solid #FFF
+  border-bottom 0
+  display flex
+  justify-content flex-start
+  flex-wrap wrap
+
+  +above($xx-large)
+    float right
+    width 960px
+
+  h2
+    margin 0
+    font-size 12px
+    width 90%
+    padding 2px 0 0 1.5em
+    letter-spacing 0.4em
+
+    +above($small)
+      font-size 14px
+
+    +above($medium - 1)
+      font-size 16px
+      width auto
+      padding-right 4em
+
+    +above($x-large)
+      font-size 18px
+      padding-right 8em
+
+  ul
+    width 50%
+    margin 0
+    padding 0
+    list-style-type none
+    display flex
+    flex-grow 1
+    justify-content space-evenly
+    border-top 2px solid #FFF
+    line-height 0
+
+    +above(897px)
+      border-width 0
+
+    +above($x-large)
+      border-width 2px 0 0
+
+    li
+      display inline-block
+      flex-grow 1
+      border-left 2px solid #FFF
+      text-align center
+
+      &:first-child
+        border-width 0
+
+        +above(897px)
+          border-left 2px solid #FFF
+
+        +above($x-large)
+          border-width 0
+
+      a
+        display inline-block
+        width 100%
+        color #FFF
+        text-decoration none
+
+        .link__icon
+          position relative
+          display block
+          width 50%
+          height 60px
+          margin 0 auto
+          color #FFF
+          fill #FFF
+
+          +above($x-small)
+            width 35%
+
+          +above($small)
+            width 30%
+
+          +above($medium)
+            width 25%
+            height 62px
+
+          & > *
+            position absolute
+            height 100%
+            width 100%
+            top 0
+            left 0
+
+        &.link--linkedin:hover
+          background-color #0e76a8
+
+        &.link--twitter:hover
+          background-color #00acee
+
+        &.link--instagram:hover
+          background-color #8134af
+
+        &.link--dribbble:hover
+          background-color #ea4c89
+h1
+  background-color #323232
+  display block
+  box-sizing border-box
+  border-width 2px
+  padding 0 0 0 1.5em
+  line-height 40px
+  text-transform capitalize
+  font-variant small-caps
+  font-size 14px
+
+  +above($medium)
+    font-size 16px
+
+  +above($x-large)
+    box-sizing content-box
+    padding 0
+    text-indent 1.5em
+
+  +below($medium)
+    padding 0 1.5em
+
+  span
+    text-align right
+
+    +above($large)
+      float right
+      padding-right 1.5em
+
+    abbr
+      text-decoration none
+
+main img
+  display block
+  width 180px
+  margin 50px auto
+
+  +above($large)
+    width 220px
+    margin 60px auto
+
+  +above($xx-large)
+    position absolute
+    width 250px
+    top -105px
+    left 0
+
+main p
+  clear both
+  float right
+  width 100%
+  margin 1em 0 0
+  color #555
+  font-size 16px
+  text-indent 1.5em
+
+  +above($large)
+    width 960px
+
+  +above($xx-large)
+    text-indent 1.3em
